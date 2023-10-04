@@ -1,21 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Gaming Zone</title>
-</head>
-<body>
-    <header>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader-circle">
+      </div>
+      <span id="loader-percent">0%</span>
 
+  </div>
+    <header>
+      <div class="navbar-container">
+        <nav class="navigator-bar">
+          <div class="nav-left">
+            <img id="burger-menu" src="./img/menu.png" alt="" />
+            <img id="logo-img" src="./img/GamingZone-logo.png" alt="" />
+            <h1>Gaming Zone</h1>
+          </div>
+          <div class="nav-right">
+            <img id="cart-img" src="./img/icons8-cart-96.png" alt="" />
+            <img id="profile-picture" src="./img/foto perfil.jpg" alt="" />
+          </div>
+          <div id="fondo-desplegable"></div>
+          <div class="categoria-desplegable">
+            <div>
+              <img src="img/close.png" id="cerra-categoria" class="cerrar-desplegable">
+            </div>
+            <ul>
+              <li><a href="./index.html">Inicio</a></li>
+              <li><a href="#para-ti">Para ti</a></li>
+              <li><hr /></li>
+              <li><a href="#accion">Accion</a></li>
+              <li><a href="#deporte">Deporte</a></li>
+              <li><a href="#horror">Horror</a></li>
+            </ul>
+          </div>
+          <div class="perfil-desplegable">
+            <div class="cerrar-perfil-container">            
+              <img src="img/close.png" id="cerrar-perfil" class="cerrar-desplegable">
+            </div>
+            <h2>Crea tu cuenta y comienza a jugar Gratis!</h2>
+            <div class="botones-perfil">
+              <button id="boton-registro">Registrarse</button>
+              <button id="boton-inicio-sesion">Iniciar Sesion</button>
+            </div>
+            <hr>
+            <div class="contenedor-data">
+              <div class="izquierda-data">
+                <ul>
+                  <li><a href="">Acerca de</a></li>
+                  <li><a href="">Publicidad</a></li>
+                  <li><a href="">Privacidad</a></li>
+                </ul>
+              </div>
+              <div class="derecha-data">
+                <ul>
+                  <li><a href="">Terminos y condiciones</a></li>
+                  <li><a href="">Desarrolladores</a></li>
+                  <li><a href="">Todos los juegos</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
     <main>
-
+      <article>
+        <div class="carrusel-principal">
+          <div class="destacado-container">
+            <div class="destacado-carrusel">
+              <div class="image-container">
+                <img src="./img/Guardians-of-the-Galaxy-2.jpeg" alt="" />
+                <div class="overlay">
+                  <h4>$39.99</h4>
+                  <h4>Guardians of the galaxy</h4>
+                  <button class="pagar"><p>Agregar al carrito</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/btm vs spd.png" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Marvel vs DC</h4>
+                  <a href="./in-game.html"><button class="jugar"><p>Jugar</p></button></a>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/injustice.png" alt="" />
+                <div class="overlay">
+                  <h4>$29.99</h4>
+                  <h4>INJUSTICE</h4>
+                  <button class="pagar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/avengers portada.png" alt="" />
+                <div class="overlay">
+                  <h4>$9.99</h4>
+                  <h4>Marvel Avengers</h4>
+                  <button class="pagar"><p>Agregar al carrito</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/gotham knights.png" alt="" /><div class="overlay">
+                  <h4>$19.99</h4>
+                  <h4>Gotham Knights</h4>
+                  <button class="pagar"><p>Agregar al carrito</p></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tarjetas-heroes">
+          <div>
+            <img src="./img/x-men-97-960x560.webp" alt="" />
+          </div>
+          <div>
+            <img src="./img/Avengers.png" alt="" />
+          </div>
+          <div>
+            <img src="./img/Justice League.png" alt="" />
+          </div>
+          <div>
+            <img src="./img/Titans.png" alt="" />
+          </div>
+        </div>
+        <div class="carrusel-game">
+          <div class="parati-container">
+            <h3 id="para-ti">Para ti</h3>
+            <div class="parati-carrusel">
+              <div class="image-container">
+                <img class="img-doom-slayer" src="./img/doom slayer.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Doom Slayer</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/cat of duty.jpg" alt="" />
+                <div class="overlay">
+                  <h4>$5.99</h4>
+                  <h4>Cat of Duty</h4>
+                  <button class="pagar"><p>Agregar al carrito</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/scary dog ghost.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Comprado</h4>
+                  <h4>Scary Ghost</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/kitter hero.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Kitter Hero</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/Grand Food Thief.jpg" alt="" />
+                <div class="overlay">
+                  <h4>$29.99</h4>
+                  <h4>Grand Theft...</h4>
+                  <button class="pagar"><p>Agregar al carrito</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/stardew valley.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Stardew Valley</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accion-container">
+            <h3 id="accion">Accion</h3>
+            <div class="accion-carrusel">
+              <div class="image-container">
+                <img src="./img/btm vs spd.png" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Marvel VS DC</h4>
+                  <a href="./in-game.html"><button class="jugar"><p>Jugar</p></button></a>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/accion1.jpg" alt="" />
+                <div class="overlay">
+                  <div class="en-carrito">
+                    <h4>En carrito</h4>
+                    <p>$12.99</p>
+                  </div>
+                  <h4>HITCAT 2</h4>
+                  <button class="pagar"><p>Pagar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/accion2.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Free Fire</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/accion4.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Gotham City 2</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/cat of duty.jpg" alt="" />
+                <div class="overlay">
+                  <h4>$5.99</h4>
+                  <h4>Cat of Duty</h4>
+                  <button class="pagar"><p>Agregar al carrito</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img class="img-doom-slayer" src="./img/doom slayer.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Doom Slayer</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/Grand Food Thief.jpg" alt="" />
+                <div class="overlay">
+                  <div class="en-carrito">
+                    <h4>En carrito</h4>
+                    <p>$29.99</p>
+                  </div>
+                  <h4>Grand Theft Food</h4>
+                  <button class="pagar"><p>Pagar</p></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="deporte-container">
+            <h3 id="deporte">Deporte</h3>
+            <div class="deporte-carrusel">
+              <div class="image-container">
+                <img src="./img/deporte1.jpg" alt="" />
+                <div class="overlay">
+                  <h4>$39.99</h4>
+                  <h4>NBA2K23</h4>
+                  <button class="pagar"><p>Agregar al carrito</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/deporte2.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Flatout 3 </h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/deporte3.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Comprado</h4>
+                  <h4>Drift Car</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/deporte4.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>PES 2023</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/kitter hero.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Kitter Hero</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="horror-container">
+            <h3 id="horror">Horror</h3>
+            <div class="horror-carrusel">
+              <div class="image-container">
+                <img src="./img/scary dog ghost.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Scary Ghost</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/horror2.jpg" alt="" />
+                <div class="overlay">
+                  <h4>$19.99</h4>
+                  <h4>Outlast 2</h4>
+                  <button class="pagar"><p>Agregar al carrito</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/horror3.jpg" alt="" />
+                <div class="overlay">
+                  <div class="en-carrito">
+                    <h4>En carrito</h4> 
+                    <p>$3.99</p>
+                  </div>
+                  <h4>Skinwalker.exe</h4>
+                  <button class="pagar"><p>Pagar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/horror4.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Comrapdo</h4>
+                  <h4>Intruso</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./img/horror5.jpg" alt="" />
+                <div class="overlay">
+                  <h4>Gratis</h4>
+                  <h4>Crazy Bunny</h4>
+                  <button class="jugar"><p>Jugar</p></button>
+                </div>
+              </div>  
+          </div>
+        </div>
+      </article>
     </main>
     <footer>
-
+      <div class="footer">
+        <div class="footer-container">
+          <div>
+            <h4>Links</h4>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Accion</a></li>
+              <li><a href="">Deporte</a></li>
+              <li><a href="">Horror</a></li>
+              <li><a href="">Carrito</a></li>
+              <li><a href="">Destacado</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Sobre Nosotros</h4>
+            <ul>
+              <li><a href="">Contactanos</a></li>
+              <li><a href="">Redes Sociales</a></li>
+              <li><a href="">Equipo</a></li>
+              <li><a href="">Trabajos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Unetenos</h4>
+            <ul>
+              <li><a href="">Registrate</a></li>
+              <li><a href="">Foros</a></li>
+              <li><a href="">Moderadores</a></li>
+              <li><a href="">Comunidada</a></li>
+              <li><a href="">Promociones</a></li>
+              <li><a href="">Conoce Grupos</a></li>
+              <li><a href="">Conoce Personas</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Ayuda</h4>
+            <ul>
+              <li><a href="">Preguntas Frecuntes</a></li>
+              <li><a href="">Soporte</a></li>
+              <li><a href="">Guia de Usuario</a></li>
+              <li><a href="">Anuncios</a></li>
+              <li><a href="">Metodos de Pago</a></li>
+            </ul>
+          </div>
+         </div>
+         <div class="copyright-container">
+          <p>© 2023 Gaming Zone. Todos los derechos reservados. Este sitio web y su contenido, incluyendo juegos, gráficos y texto, están protegidos  por leyes de derechos de autor y propiedad intelectual.
+            Queda prohibida la reproducción, distribución o modificación sin permiso previo por escrito de Gaming Zone. Todas las marcas comerciales mencionadas son propiedad de sus
+            respectivos dueños. Para solicitudes de uso de contenido, contáctanos a gamingZoneSupport@gmail.com.
+           </p>
+         </div>
+      </div>
     </footer>
-    <script src="./script.js"></script>
-</body>
+    <script src="./cargaInicio.js"></script>
+    <script src="./desplegables.js"></script>
+    <script src="./carruceles.js"></script>
+  </body>
 </html>

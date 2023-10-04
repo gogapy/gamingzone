@@ -1,0 +1,695 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap");
+
+/* General style reset */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* scroll-snap-type: y mandatory; */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: "Nunito", sans-serif;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f5f5f5;
+  background: #0c0d14;
+  height: 100vh;
+  transition: all 0.2s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #0e0e0e;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* 
+|-----------------/---------------/--------\
+| Computer-Screen \ Navigator-Bar \ Styles  >
+|-----------------/---------------/--------/
+*/
+/* Estilos para la pantalla de carga */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0c0d14; /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Asegura que esté en la parte superior */
+}
+
+.loader-circle {
+  width: 100px;
+  height: 100px;
+  border: 8px solid #0057ff;
+  border-top: 8px solid transparent;
+  border-radius: 50%;
+  animation: spin 5s linear infinite;
+  position: relative;
+}
+
+#loader-percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 
+|-----------------/---------------/--------\
+| Computer-Screen \ Navigator-Bar \ Styles  >
+|-----------------/---------------/--------/
+*/
+.navigator-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #212233;
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 3rem;
+  height: 3rem;
+}
+
+nav h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f5f5f5;
+}
+
+#profile-picture {
+  border-radius: 2rem;
+  border: #f5f5f5 solid;
+}
+
+#cart-img,
+#burger-menu {
+  filter: invert();
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.categoria-desplegable {
+  position: fixed;
+  top: 0;
+  left: -20rem;
+  width: 20rem;
+  height: 100vh;
+  background-color: #1a1b28;
+  padding: 1.5rem 2rem 0 2rem;
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+}
+
+.categoria-desplegable a {
+  color: #f5f5f5;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.categoria-desplegable ul li {
+  margin-bottom: 1rem;
+}
+
+.perfil-desplegable {
+  position: fixed;
+  top: 0;
+  right: -30rem;
+  width: 30rem;
+  height: 100vh;
+  background-color: #1a1b28;
+  padding: 1.5rem 2rem 0 2rem;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+}
+
+.perfil-desplegable h2 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.perfil-desplegable button {
+  font-weight: 700;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.botones-perfil {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.botones-perfil button {
+  margin-left: 1rem;
+}
+
+#boton-registro {
+  background-color: #e5e5e5;
+  transition: background-color 0.5s ease-in-out;
+}
+
+#boton-registro:hover {
+  background-color: #878a9e;
+}
+
+#boton-inicio-sesion {
+  background-color: #0057ff;
+  color: #f5f5f5;
+  transition: background-color 0.5s ease-in-out;
+}
+
+#boton-inicio-sesion:hover {
+  background-color: #001f57;
+}
+
+hr {
+  border: none;
+  border-top: 0.6px solid #8f96a3;
+  margin: 1rem 0 1rem 0;
+  box-sizing: content-box;
+}
+
+.cerrar-desplegable {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  filter: invert();
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+.contenedor-data {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contenedor-data ul li a {
+  font-size: 1.25rem;
+  color: #8f96a3;
+}
+
+.cerrar-perfil-container {
+  display: flex;
+  justify-content: right;
+}
+
+#fondo-desplegable {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+  z-index: 99;
+  display: none;
+}
+
+/* 
+|-----------------/----------/--------\
+| Computer-Screen \ Carrusel \ Styles  >
+|-----------------/----------/--------/
+*/
+
+.carrusel-principal {
+  padding-top: 4rem;
+}
+
+.carrusel-game div h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.parati-container,
+.accion-container,
+.deporte-container,
+.horror-container,
+.destacado-container {
+  margin: 1.5rem 1rem 0 1rem;
+}
+
+.parati-container div,
+.accion-container div,
+.deporte-container div,
+.horror-container div,
+.destacado-container div {
+  display: flex;
+  min-width: 400px;
+  height: 250px;
+}
+
+.destacado-container div {
+  display: flex;
+  min-width: 915px;
+  height: 382px;
+}
+
+.parati-carrusel,
+.accion-carrusel,
+.deporte-carrusel,
+.horror-carrusel,
+.destacado-carrusel {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap; /* Evita que los elementos se desplacen a una nueva línea */
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.parati-container div img,
+.accion-container div img,
+.deporte-carrusel div img,
+.horror-carrusel div img {
+  width: 400px;
+  height: 250px;
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.img-doom-slayer {
+  object-position: center top;
+}
+
+.destacado-container div img {
+  width: 915px;
+  height: 3820px;
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.tarjetas-heroes {
+  display: flex;
+  min-width: 237px;
+  height: 119px;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.tarjetas-heroes div img {
+  width: 237px;
+  height: 119px;
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin: 0 1rem 0 1rem;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block; /* Para que el contenedor ocupe solo el espacio necesario */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaciado uniforme entre los elementos */
+  border-radius: 25px;
+
+  align-items: flex-end; /* Alineación a la derecha */
+  color: white; /* Color del texto y del botón */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  padding: 10px; /* Espacio interior */
+  opacity: 0; /* Ocultar inicialmente */
+  transition: opacity 0.3s; /* Transición suave de opacidad */
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Mostrar en el hover */
+}
+.image-container {
+  margin: 0 1rem 0 1rem;
+}
+
+/* Estilos para el botón */
+.overlay button {
+  color: white; /* Color del texto del botón */
+  border: none;
+  padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.jugar {
+  background-color: #a88c00;
+}
+
+.pagar {
+  background-color: #0057ff;
+}
+
+.overlay button p {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.pagar:hover {
+  background-color: #001f57;
+}
+
+.jugar:hover {
+  background-color: #907600;
+}
+
+.overlay h4 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  -webkit-text-stroke: 0.8px #907600;
+  margin-right: 1rem;
+}
+
+.overlay h4:nth-child(2) {
+  position: absolute;
+  bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+  left: 10px; /* Ajusta la distancia desde la parte izquierda */
+  margin: 0; /* Elimina los márgenes para evitar espacios adicionales */
+  margin-left: 1rem;
+}
+
+.en-carrito {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.en-carrito p {
+  font-weight: 700;
+  -webkit-text-stroke: 0.8px #907600;
+  margin-right: 1rem;
+}
+
+/* 
+|-----------------/----------/------\
+| Computer-Screen \ Footer \ Styles  >
+|-----------------/----------/------/
+*/
+
+.footer {
+  background-color: #212233;
+  color: #fff;
+}
+
+footer {
+  bottom: 0;
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  text-align: left;
+  justify-content: space-around;
+}
+
+.footer-container div {
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.footer-container h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.footer-container ul li a {
+  color: #f5f5f5;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-container ul li a:hover {
+  color: #878a9e;
+}
+
+.footer-container ul li {
+  margin-bottom: 0.3rem;
+}
+
+.copyright-container {
+  display: flex;
+  text-align: left;
+  margin: 1.5rem 1.5rem 0 1.5rem;
+  padding-bottom: 1rem;
+  color: #878a9e;
+}
+
+/*
+-----------------------------------------------------------------------------------------|
+-----------------------------------------------------------------------------------------|
+------------------------------------IN-GAME-STYLES---------------------------------------|
+-----------------------------------------------------------------------------------------|
+-----------------------------------------------------------------------------------------|
+*/
+
+.superior-container {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: space-between;
+}
+
+.superior-container a,
+.superior-container button,
+.superior-container p {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+}
+
+.broadcast,
+.compartir-juego {
+  display: flex;
+  background-color: rgba(33, 34, 51, 0.2);
+  margin: 0 1rem 0 1rem;
+  border-radius: 3rem;
+}
+
+.broadcast {
+  padding: 0.5rem 0 0.5rem 0;
+  width: 1074px;
+  display: flex;
+}
+
+.compartir-juego {
+  padding: 0.5rem 0 0.5rem 0;
+  width: 369px;
+}
+
+/* 
+|-----------------/----------/------\
+| Computer-Screen \ Footer \ Styles  >
+|-----------------/----------/------/
+*/
+
+.pjuego-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pantalla-juego {
+  margin: 1rem;
+  width: 1074px;
+  height: 75vh;
+}
+
+.instrucciones-juego {
+  margin: 1rem;
+  width: 369px;
+  height: 75vh;
+  display: flex;
+  padding: 1rem 2rem 0 2rem;
+}
+
+.instrucciones-juego,
+.pantalla-juego {
+  background-color: rgba(33, 34, 51, 0.2);
+  border-radius: 2rem;
+}
+
+.instrucciones-juego h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.instrucciones-juego p {
+  font-size: 1.1rem;
+}
+
+.instrucciones-juego a {
+  color: #ffe866;
+  transition: all 0.2s ease-in-out;
+}
+
+.instrucciones-juego a:hover {
+  color: #c1a000;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  display: flex;
+  background-color: rgba(33, 34, 51, 0.2);
+  margin: 1rem;
+  height: 4rem;
+  border-radius: 1rem;
+  justify-content: space-between;
+}
+
+.input input {
+  background-color: rgba(33, 34, 51, 0.4);
+  margin: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  color: #f5f5f5;
+  font-weight: 700;
+  width: 90%;
+  padding-left: 1rem;
+}
+
+.input button {
+  color: #f5f5f5;
+  font-weight: 700;
+  background-color: rgba(33, 34, 51, 0.4);
+  margin: 0.5rem;
+  border-radius: 1rem;
+  width: 10%;
+}
+
+.comentarios-contenedor {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(33, 34, 51, 0.2);
+  margin: 0rem 1rem;
+  border-radius: 1rem;
+  height: 100vh;
+}
+
+.sin-comentarios {
+  color: #878a9e;
+  font-weight: 700;
+  text-align: center;
+}
+
+.comentario-example {
+  margin: 1rem;
+  background-color: rgba(33, 34, 51, 0.4);
+  border-radius: 1rem;
+  display: flex;
+}
+
+.comentario-example img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  border: solid #f5f5f5;
+  object-fit: cover;
+}
+
+.comentario1 {
+  margin: 1rem 1rem 1rem 0;
+}
+
+.comentario1 p {
+  font-weight: 600;
+}
+
+.comentario1 h3 {
+  font-weight: 700;
+}
+
+.texto-comentario {
+  background-color: rgba(33, 34, 51, 0.4);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
