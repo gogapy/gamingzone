@@ -1,0 +1,76 @@
+{
+  "categorias": [
+    {
+      "nombre": "Destacados",
+      "videojuegos": [
+        {
+          "titulo": "Marvel vs DC",
+          "precio": 0,
+          "imagen": "./img/btm vs spd.png"
+        },
+        {
+          "titulo": "INJUSTICE",
+          "precio": 29.99,
+          "imagen": "./img/injustice.png"
+        },
+        {
+          "titulo": "Marvel Avengers",
+          "precio": 9.99,
+          "imagen": "./img/avengers portada.png"
+        },
+        {
+          "titulo": "Gotham Knights",
+          "precio": 19.99,
+          "imagen": "./img/gotham knights.png"
+        }
+      ]
+    },
+    {
+      "nombre": "Para ti",
+      "videojuegos": [
+        {
+          "titulo": "Doom Slayer",
+          "precio": 0,
+          "imagen": "./img/doom slayer.jpg"
+        },
+        {
+          "titulo": "Cat of Duty",
+          "precio": 5.99,
+          "imagen": "./img/cat of duty.jpg"
+        },
+        {
+          "titulo": "Free Fire",
+          "precio": 0,
+          "imagen": "./img/accion2.jpg"
+        },
+        {
+          "titulo": "Gotham City 2",
+          "precio": 0,
+          "imagen": "./img/accion4.jpg"
+        },
+        {
+          "titulo": "Grand Theft Food",
+          "precio": 29.99,
+          "imagen": "./img/Grand Food Thief.jpg"
+        },
+        {
+          "titulo": "Stardew Valley",
+          "precio": 29.99,
+          "imagen": "./img/stardew valley.jpg"
+        }
+      ]
+    },
+    {
+      "nombre": "Accion",
+      "videojuegos": []
+    },
+    {
+      "nombre": "Horror",
+      "videojuegos": []
+    },
+    {
+      "nombre": "Deporte",
+      "videojuegos": []
+    }
+  ]
+}
