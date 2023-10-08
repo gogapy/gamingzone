@@ -564,7 +564,7 @@ footer {
 .compartir-juego {
   display: flex;
   background-color: rgba(33, 34, 51, 0.2);
-  margin: .5rem 1rem 0 1rem;
+  margin: 0.5rem 1rem 0 1rem;
   border-radius: 3rem;
 }
 
@@ -579,6 +579,115 @@ footer {
   padding: 0.5rem 0 0.5rem 0;
   width: 369px;
   justify-content: center;
+}
+
+/* 
+|-----------------/----------------/--------\
+| Computer-Screen \ COMPARTIR-GAME \ Styles  >
+|-----------------/----------------/--------/
+*/
+
+.container-compartir {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.salir-compartir {
+  background-color: #212233;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.salir-compartir img {
+  width: 3rem;
+  height: 3rem;
+  filter: invert(50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.salir-compartir img:hover {
+  transform: rotate(180deg);
+}
+
+.compartir-links-container {
+  background-color: #212233;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.link-compartir-container {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.link-compartir-container input {
+  background-color: rgba(12, 13, 20, 0.4);
+  border: none;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+  font-weight: 700;
+  color: #8f96a3;
+  text-overflow: ellipsis;
+}
+
+.compartir-links-container h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.enlace-compartir-img-container {
+  background-color: rgba(12, 13, 20, 0.4);
+  min-width: 3rem;
+  min-height: 3rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.enlace-compartir-img-container img {
+  width: 1.6rem;
+  height: 1.6rem;
+  filter: invert(50%);
+}
+
+.redes-sociales-compartir {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.redes-sociales-compartir div {
+  background-color: rgba(12, 13, 20, 0.4);
+  min-width: 3rem;
+  min-height: 3rem;
+  border-radius: 100%;
+  margin: 0 1rem 0 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.redes-sociales-compartir img {
+  width: 1.6rem;
+  height: 1.6rem;
+  filter: invert(50%);
 }
 
 /* 
@@ -640,7 +749,7 @@ footer {
 .input {
   display: flex;
   background-color: rgba(33, 34, 51, 0.2);
-  margin: 1rem;
+  margin: .5rem 1rem 1rem 1rem;
   height: 4rem;
   border-radius: 1rem;
   justify-content: space-between;
@@ -664,6 +773,15 @@ footer {
   margin: 0.5rem;
   border-radius: 1rem;
   width: 10%;
+}
+
+.comentarios {
+  margin: 3rem 1rem;
+}
+
+.comentarios h2 {
+  font-weight: 700;
+  margin: 0 1rem;
 }
 
 .comentarios-contenedor {
@@ -715,19 +833,13 @@ footer {
   border-radius: 1rem;
 }
 
-/**/
-
-.galeria-detalles {
-  margin: 1rem;
-  width: 35%;
-  height: 32rem;
-  display: flex;
-  overflow: hidden;
-  background-color: rgba(33, 34, 51, 0.2);
-  border-radius: 2rem;
-  padding: 1rem;
-}
-
+/*
+-----------------------------------------------------------------------------------------|
+-----------------------------------------------------------------------------------------|
+---------------------------------------DETALLES------------------------------------------|
+-----------------------------------------------------------------------------------------|
+-----------------------------------------------------------------------------------------|
+*/
 .video-detalles {
   margin: 1rem;
   width: 65%;
@@ -739,9 +851,27 @@ footer {
   padding: 1rem;
 }
 
+.galeria-contenedor {
+  display: flex;
+  animation: desplazar 20s linear infinite; /* Ajusta la duración y el tiempo de la animación según tus necesidades */
+}
+
+.galeria-detalles {
+  width: 35%;
+  height: 32rem;
+  overflow: hidden;
+  background-color: rgba(33, 34, 51, 0.2);
+  border-radius: 2rem;
+  margin: 1rem;
+  overflow: hidden;
+  position: relative; /* Agregar posición relativa */
+}
+
 .galeria-detalles div {
   height: 100%;
   width: 100%;
+  padding: .5rem;
+  flex-shrink: 0; /* Para evitar que las imágenes se reduzcan cuando el espacio es insuficiente */
 }
 
 .galeria-detalles img {
@@ -758,6 +888,15 @@ footer {
   border-radius: 1rem;
   object-fit: cover;
   box-shadow: #212233 0.2px 0.2px 10px 1px;
+}
+
+@keyframes desplazar {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Desplaza las imágenes hacia la izquierda */
+  }
 }
 
 .detalles-container {
@@ -819,7 +958,6 @@ footer {
   box-shadow: #212233 0.2px 0.2px 10px 1px;
 }
 
-
 /*
 -----------------------------------------------------------------------------------------|
 -----------------------------------------------------------------------------------------|
@@ -827,7 +965,6 @@ footer {
 -----------------------------------------------------------------------------------------|
 -----------------------------------------------------------------------------------------|
 */
-
 
 .carrito-container {
   display: flex;
@@ -916,7 +1053,7 @@ footer {
 
 .boton-carrito button {
   color: #e5e5e5;
-  padding: .5rem 2rem; 
+  padding: 0.5rem 2rem;
   border-radius: 4rem;
   font-weight: 700;
 }
@@ -944,7 +1081,6 @@ footer {
     display: none;
   }
 }
-
 
 @media (max-width: 510px) {
   h1 {
