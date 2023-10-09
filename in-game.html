@@ -20,19 +20,13 @@
             <h1>Gaming Zone</h1>
           </div>
           <div class="nav-right">
-            <a href="./carrito.html">
-              <img id="cart-img" src="./img/icons8-cart-96.png" alt="" />
-            </a>
+            <a href="./carrito.html"><img id="cart-img" src="./img/icons8-cart-96.png" alt="" /></a>
             <img id="profile-picture" src="./img/foto perfil.jpg" alt="" />
           </div>
           <div id="fondo-desplegable"></div>
           <div class="categoria-desplegable">
             <div>
-              <img
-                src="img/close.png"
-                id="cerra-categoria"
-                class="cerrar-desplegable"
-              />
+              <img src="img/close.png" id="cerra-categoria" class="cerrar-desplegable">
             </div>
             <ul>
               <li><a href="./index.html">Inicio</a></li>
@@ -44,35 +38,97 @@
             </ul>
           </div>
           <div class="perfil-desplegable">
-            <div class="cerrar-perfil-container">
-              <img
-                src="img/close.png"
-                id="cerrar-perfil"
-                class="cerrar-desplegable"
-              />
+            <div class="cerrar-perfil-container">            
+              <img src="img/close.png" id="cerrar-perfil" class="cerrar-desplegable">
             </div>
-            <h2>Crea tu cuenta y comienza a jugar Gratis!</h2>
-            <div class="botones-perfil">
-              <button id="boton-registro">Registrarse</button>
-              <button id="boton-inicio-sesion">Iniciar Sesion</button>
-            </div>
-            <hr />
-            <div class="contenedor-data">
-              <div class="izquierda-data">
-                <ul>
-                  <li><a href="">Acerca de</a></li>
-                  <li><a href="">Publicidad</a></li>
-                  <li><a href="">Privacidad</a></li>
-                </ul>
-              </div>
-              <div class="derecha-data">
-                <ul>
-                  <li><a href="">Terminos y condiciones</a></li>
-                  <li><a href="">Desarrolladores</a></li>
-                  <li><a href="">Todos los juegos</a></li>
-                </ul>
+            <div class="sin-sesion-iniciada">
+              <h2>Crea tu cuenta y comienza a jugar Gratis!</h2>
+              <div class="botones-perfil">
+                <button id="boton-registro">Registrarse</button>
+                <button id="boton-inicio-sesion">Iniciar Sesion</button>
               </div>
             </div>
+            <div class="sesion-iniciada">
+              <div>
+                <img src="./img/foto perfil.jpg" alt="">
+                <h2>Nombre de usuario</h2>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <p>Mi perfil</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <p>Editar Perfil</p>
+                  </li>
+                </ul>
+                <ul id="boton-cerrar-sesion">
+                  <li>
+                    <p>Cerrar Sesion</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="container-registrarse">
+                <button class="continuar-google">Continuar con google</button>
+                <button class="continuar-facebook">Continuar con Facebook</button>
+                <button class="continuar-correo">Registrarse con correo</button>
+                <h4>¿Ya tienes cuenta? <span class="iniciar-sesion-registro">Inicia Sesion</span></h4>
+              </div>
+            </div>
+            <div class="registrarse-correo-container">
+              <h3>Registrate con tu correo</h3>
+              <div class="registrarse-correo">
+                <div class="info-personal">
+                  <h4>Informacion Personal</h4>
+                  <input type="text" placeholder="Nombre">
+                  <input type="text" placeholder="Apellido">
+                  <input type="text" placeholder="Nickname">
+                  <input type="number" placeholder="Edad">
+                  <input type="text" placeholder="Mail">
+                </div>      
+                <div class="password">
+                  <h4>Contraseña</h4>
+                  <input type="password" placeholder="Contraseña">
+                  <input type="password" placeholder="Repetir Contraseña">
+                </div>
+                <div class="captcha-container">
+                  <input type="checkbox">
+                  <h5>Verifica que no seas un robot</h4>
+                </div>
+                <button class="boton-confirmar-registro">Continuar</button>
+              </div>
+              <h4 class="ya-tienes-cuenta">¿Ya tienes cuenta? <span class="iniciar-sesion-correo">Inicia Sesion</span></h4>
+            </div>
+            <hr class="linea-divisora">
+              <div class="contenedor-data">
+                <div class="izquierda-data">
+                  <ul>
+                    <li><a href="">Acerca de</a></li>
+                    <li><a href="">Publicidad</a></li>
+                    <li><a href="">Privacidad</a></li>
+                  </ul>
+                </div>
+                <div class="derecha-data">
+                  <ul>
+                    <li><a href="">Terminos y condiciones</a></li>
+                    <li><a href="">Desarrolladores</a></li>
+                    <li><a href="">Todos los juegos</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="redes-sociales">
+                <ul>
+                  <li><a href=""><img src="./img/instagram.png" alt=""></a></li>
+                  <li><a href=""><img src="./img/twitter.png" alt=""></a></li>
+                  <li><a href=""><img src="./img/facebook.png" alt=""></a></li>
+                  <li><a href=""><img src="./img/github.png" alt=""></a></li>
+                  <li><a href=""><img src="./img/youtube.png" alt=""></a></li>
+                </ul>
+              </div>
           </div>
         </nav>
       </div>
@@ -336,5 +392,6 @@
     <script src="./desplegables.js"></script>
     <script src="./carruceles.js"></script>
     <script src="./despliegueCompartir.js"></script>
+    <script src="./sesion.js"></script>
   </body>
 </html>
