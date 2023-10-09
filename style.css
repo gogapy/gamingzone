@@ -161,6 +161,10 @@ nav h1 {
   gap: 1rem;
 }
 
+.nav-right a {
+  max-height: 48px;
+}
+
 .categoria-desplegable {
   position: fixed;
   top: 0;
@@ -289,6 +293,225 @@ hr {
   display: none;
 }
 
+.redes-sociales {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+}
+
+.redes-sociales ul {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+}
+
+.redes-sociales ul li {
+  margin: 0.75rem;
+  filter: invert(50%);
+}
+
+.redes-sociales ul li img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.linea-divisora {
+  display: block;
+}
+
+.sin-sesion-iniciada {
+  display: block;
+}
+
+.sesion-iniciada {
+  display: none;
+}
+
+.registrarse-correo-container {
+  display: none;
+}
+
+.container-registrarse {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+
+.sesion-iniciada div img {
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  border: solid 0.2rem #e5e5e5;
+}
+
+.sesion-iniciada div ul li p {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.sesion-iniciada div ul {
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.container-registrarse h4 {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.iniciar-sesion-registro, .iniciar-sesion-correo {
+  color: #a48eff;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.iniciar-sesion-registro:hover, .iniciar-sesion-correo:hover {
+  color: #695ba4;
+}
+
+.iniciar-sesion-registro:active, .iniciar-sesion-correo:active {
+  color: #cabdff;
+  transition: none;
+}
+
+.continuar-google,
+.continuar-facebook,
+.continuar-correo {
+  background-color: #c0c0c0;
+  margin: 1rem;
+  color: #e5e5e5;
+}
+
+.continuar-google {
+  background-color: #e5e5e5;
+  transition: all 0.5s ease-in-out;
+  color: #0e0e0e;
+}
+
+.continuar-facebook {
+  background-color: #2458ab;
+  transition: all 0.5s ease-in-out;
+}
+
+.continuar-correo {
+  transition: all 0.5s ease-in-out;
+  background-color: #0057ff;
+}
+
+.continuar-google:hover {
+  background-color: #a0a0a0;
+}
+
+.continuar-facebook:hover {
+  background-color: #18396f;
+}
+
+.continuar-correo:hover {
+  background-color: #001f57;
+}
+
+.continuar-google:active {
+  background-color: #e5e5e5;
+  transition: none;
+}
+
+.continuar-facebook:active {
+  background-color: #2d6bcf;
+  transition: none;
+}
+
+.continuar-correo:active {
+  background-color: #80a9ff;
+  transition: none;
+}
+
+.registrarse-correo-container h3 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.registrarse-correo-container h4 {
+  font-weight: 700;
+  margin: 0 0.5rem;
+}
+
+.password {
+  margin-top: 1rem;
+}
+
+.registrarse-correo {
+  margin: 1rem;
+}
+
+.registrarse-correo,
+.registrarse-correo div:not(.captcha-container) {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-personal input,
+.password input {
+  margin: 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgba(12, 13, 20, 0.7);
+  height: 2.5rem;
+  font-weight: 700;
+  padding: 10px;
+  color: #e5e5e5;
+}
+
+.captcha-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(12, 13, 20, 0.7);
+  margin: 0.5rem 0.5rem;
+  border-radius: 1rem;
+  align-items: center;
+}
+
+.captcha-container input {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 2px solid black;
+}
+
+.captcha-container h5 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-left: 1rem;
+}
+
+.boton-confirmar-registro {
+  background-color: #a88c00;
+  width: 45%;
+  color: #e5e5e5;
+  margin: 0.5rem 0 0 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.boton-confirmar-registro:hover {
+  background-color: #907600;
+}
+
+.boton-confirmar-registro:active {
+  transition: none;
+  background-color: #ffd700;
+}
+
+.ya-tienes-cuenta {
+  text-align: center;
+}
+
+.cerrar-desplegable {
+  margin: 0;
+}
+
 /* 
 |-----------------/----------/--------\
 | Computer-Screen \ Carrusel \ Styles  >
@@ -407,6 +630,7 @@ hr {
 .image-container:hover .overlay {
   opacity: 1; /* Mostrar en el hover */
 }
+
 .image-container {
   margin: 0 1rem 0 1rem;
 }
@@ -749,7 +973,7 @@ footer {
 .input {
   display: flex;
   background-color: rgba(33, 34, 51, 0.2);
-  margin: .5rem 1rem 1rem 1rem;
+  margin: 0.5rem 1rem 1rem 1rem;
   height: 4rem;
   border-radius: 1rem;
   justify-content: space-between;
@@ -851,11 +1075,6 @@ footer {
   padding: 1rem;
 }
 
-.galeria-contenedor {
-  display: flex;
-  animation: desplazar 20s linear infinite; /* Ajusta la duración y el tiempo de la animación según tus necesidades */
-}
-
 .galeria-detalles {
   width: 35%;
   height: 32rem;
@@ -870,7 +1089,7 @@ footer {
 .galeria-detalles div {
   height: 100%;
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
   flex-shrink: 0; /* Para evitar que las imágenes se reduzcan cuando el espacio es insuficiente */
 }
 
@@ -890,12 +1109,26 @@ footer {
   box-shadow: #212233 0.2px 0.2px 10px 1px;
 }
 
+.galeria-contenedor {
+  display: flex;
+  animation: desplazar 20s alternate infinite; /* Ajusta la duración y el tiempo de la animación según tus necesidades */
+}
+
 @keyframes desplazar {
   0% {
     transform: translateX(0);
   }
+  25% {
+    transform: translateX(-97%); /* Desplaza las imágenes hacia la izquierda */
+  }
+  50% {
+    transform: translateX(-194%); /* Desplaza las imágenes hacia la izquierda */
+  }
+  75% {
+    transform: translateX(-291%); /* Desplaza las imágenes hacia la izquierda */
+  }
   100% {
-    transform: translateX(-100%); /* Desplaza las imágenes hacia la izquierda */
+    transform: translateX(-388%); /* Desplaza las imágenes hacia la izquierda */
   }
 }
 

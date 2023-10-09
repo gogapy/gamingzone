@@ -16,5 +16,5 @@ d.addEventListener("DOMContentLoaded", function () {
             // Simula el progreso llenando el círculo gradualmente
             loaderCircle.style.transform = `rotate(${(percent / 100) * 360}deg)`;
         }
-    }, 0); // Cambia la velocidad de carga ajustando el valor del intervalo
+    }, 50); // Cambia la velocidad de carga ajustando el valor del intervalo
   });
