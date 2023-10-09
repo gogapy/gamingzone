@@ -11,7 +11,6 @@ let $btnCerrarSesion = document.getElementById("boton-cerrar-sesion"),
   $iniciarSesionRegistro = document.querySelector(".iniciar-sesion-registro"),
   $iniciarSesionCorreo = document.querySelector(".iniciar-sesion-correo");
 
-
   $btnContinuarCorreo = document.querySelector(".boton-confirmar-registro"),
   $lineaDivisora = document.querySelector(".linea-divisora"),
   $contenedorData = document.querySelector(".contenedor-data"),

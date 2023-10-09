@@ -4,7 +4,7 @@ const menuDesplegable = d.querySelector("#burger-menu"),
   perfilDesplegable = d.querySelector(".perfil-desplegable"),
   fondoDesplegable = d.querySelector("#fondo-desplegable"),
   botonCerrarPerfil = d.getElementById("cerrar-perfil"),
-  botonCerrarCategoria = d.getElementById("cerra-categoria");
+  botonCerrarCategoria = d.getElementById("cerrar-categoria");
 
 menuDesplegable.addEventListener("click", () => {
   categoriaDesplegable.style.left = "0rem";

@@ -139,7 +139,7 @@ nav h1 {
 
 #profile-picture {
   border-radius: 2rem;
-  border: #f5f5f5 solid;
+  border: 3.5px black solid;
   cursor: pointer;
 }
 
@@ -148,6 +148,33 @@ nav h1 {
   filter: invert();
   cursor: pointer;
 }
+
+#burger-menu {
+  transition: transform 1s ease-in-out;
+
+}
+
+#burger-menu:hover {
+  transform: rotate(-90deg);
+}
+
+#cerrar-categoria {
+  transition: transform 1s ease-in-out;
+}
+
+#cerrar-categoria:hover {
+  transform: rotate(-90deg);
+}
+
+#cerrar-perfil {
+  transition: transform 1s ease-in-out;
+}
+
+#cerrar-perfil:hover {
+  transform: rotate(-90deg);
+}
+
+
 
 .nav-left {
   display: flex;
@@ -163,6 +190,9 @@ nav h1 {
 
 .nav-right a {
   max-height: 48px;
+}
+.nav-right img {
+  filter: invert(100%);
 }
 
 .categoria-desplegable {
@@ -361,17 +391,20 @@ hr {
   font-weight: 700;
 }
 
-.iniciar-sesion-registro, .iniciar-sesion-correo {
+.iniciar-sesion-registro,
+.iniciar-sesion-correo {
   color: #a48eff;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
 
-.iniciar-sesion-registro:hover, .iniciar-sesion-correo:hover {
+.iniciar-sesion-registro:hover,
+.iniciar-sesion-correo:hover {
   color: #695ba4;
 }
 
-.iniciar-sesion-registro:active, .iniciar-sesion-correo:active {
+.iniciar-sesion-registro:active,
+.iniciar-sesion-correo:active {
   color: #cabdff;
   transition: none;
 }
@@ -929,6 +962,20 @@ footer {
   margin: 1rem;
   width: 1074px;
   height: 75vh;
+  text-align: center;
+}
+
+.pantalla-juego h3, .pantalla-juego h4 {
+  font-weight: 700;
+}
+
+.pantalla-juego h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.pantalla-juego h4 {
+  font-size: 1.2rem;
 }
 
 .instrucciones-juego {
@@ -1152,12 +1199,13 @@ footer {
   width: 5rem;
   height: 5rem;
   box-shadow: none;
+  filter: invert(100%);
 }
 
 .boton-play-video p {
   font-weight: 800;
   font-size: 1.2rem;
-  color: #0e0e0e;
+  color: #e5e5e5;
 }
 
 .info-adicional-container {
