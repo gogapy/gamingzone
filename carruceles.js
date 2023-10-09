@@ -1,5 +1,4 @@
 
-// Función para agregar eventos de arrastre a un carrusel dado
 function agregarEventosCarrusel(carrusel) {
   carrusel.addEventListener("mousedown", (e) => {
     isMouseDown = true;
@@ -24,7 +23,6 @@ function agregarEventosCarrusel(carrusel) {
   });
 }
 
-// Selecciona y agrega eventos a los carruseles
 const paraticarrusel = d.querySelector(".parati-carrusel");
 const accioncarrusel = d.querySelector(".accion-carrusel");
 const deportecarrusel = d.querySelector(".deporte-carrusel");

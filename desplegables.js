@@ -6,7 +6,6 @@ const menuDesplegable = d.querySelector("#burger-menu"),
   botonCerrarPerfil = d.getElementById("cerrar-perfil"),
   botonCerrarCategoria = d.getElementById("cerra-categoria");
 
-// codigo para el despliegue de las categorias y perfil
 menuDesplegable.addEventListener("click", () => {
   categoriaDesplegable.style.left = "0rem";
   fondoDesplegable.style.display = "block";
@@ -17,7 +16,6 @@ menuPerfil.addEventListener("click", () => {
   fondoDesplegable.style.display = "block";
 });
 
-// codigo para el cierre de las categorias y perfil
 botonCerrarPerfil.addEventListener("click", () => {
   perfilDesplegable.style.right = "-30rem";
   fondoDesplegable.style.display = "none";
